@@ -24,17 +24,18 @@ var LoginPage = React.createClass({
           <div className="row"> 
             <div className="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4"> 
               <img src={require("../../common/images/flat-avatar.png")} className="user-avatar" /> 
-              <h1>Ani Theme <small>Free React.js Edition</small></h1> 
+              <h1>Hi, I'm Jessie </h1> 
+              <h1> <small> Let me help you secure your financial future</small></h1>
               <form role="form" onSubmit={this.handleLogin} className="ng-pristine ng-valid"> 
                 <div className="form-content"> 
                   <div className="form-group"> 
-                    <input type="text" className="form-control input-underline input-lg" placeholder="Email" /> 
+                    <input type="text" className="form-control input-underline input-lg" placeholder="Name" /> 
                   </div> 
                   <div className="form-group"> 
-                    <input type="password" className="form-control input-underline input-lg" placeholder="Password" /> 
+                    <input type="password" className="form-control input-underline input-lg" placeholder="Customer ID" /> 
                   </div> 
                 </div> 
-                <button type="submit" className="btn btn-white btn-outline btn-lg btn-rounded">Login</button> 
+                <button type="submit" className="btn btn-white btn-outline btn-lg btn-rounded">Start</button> 
               </form> 
             </div> 
           </div> 
@@ -66,7 +67,7 @@ var LoginPage = React.createClass({
   handleLogin: function(e){
 
     e.preventDefault();
-    this.props.history.pushState(null, '/dashboard/overview');
+    //this.props.history.pushState(null, '/dashboard/overview');
     
     // this.transitionTo('dashboard');
 
