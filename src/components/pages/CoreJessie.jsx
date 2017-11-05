@@ -4,8 +4,8 @@ import {Panel, Input, Button} from 'react-bootstrap';
 import { History } from 'history';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import $ from "jQuery";
-import cookie from 'react-cookies';
-var LoginPage = React.createClass({
+
+var CoreJessie = React.createClass({
 
   getInitialState: function(){
     return {
@@ -29,10 +29,10 @@ var LoginPage = React.createClass({
               <form role="form" onSubmit={this.handleLogin} className="ng-pristine ng-valid"> 
                 <div className="form-content"> 
                   <div className="form-group"> 
-                    <input type="text" onChange={ this.setLoginID } className="form-control input-underline input-lg" placeholder="Name" /> 
+                    <input type="text" className="form-control input-underline input-lg" placeholder="Name" /> 
                   </div> 
                   <div className="form-group"> 
-                    <input type="password" onChange={ this.setPassword } className="form-control input-underline input-lg" placeholder="Customer ID" /> 
+                    <input type="password" className="form-control input-underline input-lg" placeholder="Customer ID" /> 
                   </div> 
                 </div> 
                 <button type="submit" className="btn btn-white btn-outline btn-lg btn-rounded">Start</button> 
@@ -47,7 +47,7 @@ var LoginPage = React.createClass({
   },
 
   setLoginID: function(e) {
-    cookie.save('userId', e.target.value, { path: '/' });
+
     this.setState({
       loginID: e.target.value,
       loginError: ''
@@ -56,7 +56,7 @@ var LoginPage = React.createClass({
   },
 
   setPassword: function(e) {
-  	console.log("fuck1");
+
     this.setState({
       password: e.target.value,
       loginError: ''
@@ -66,9 +66,6 @@ var LoginPage = React.createClass({
 
   handleLogin: function(e){
 
-  	console.log("fuck");
-  	console.log(cookie.load('userId'));
-  	console.log(this.firstName);
     e.preventDefault();
     this.props.history.pushState(null, '/dashboard/reports');
     
@@ -80,4 +77,4 @@ var LoginPage = React.createClass({
 
 });
 
-export default LoginPage;
+export default CoreJessie;
