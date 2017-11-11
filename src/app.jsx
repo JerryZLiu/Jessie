@@ -29,7 +29,26 @@ const rootRoute = {
       component: require('./components/pages/Login'),
       childRoutes: [
       ]
-    }
+    },
+    {
+      path: '/corejessie',
+      component: require('./components/pages/corejessie'),
+      childRoutes: [
+      ]
+    },
+    {
+      path: '/graphs',
+      component: require('./components/pages/graphs'),
+      childRoutes: [
+      ]
+    },
+    {
+      path: '/datatime',
+      component: require('./components/pages/datatime'),
+      childRoutes: [
+      ]
+    },
+    
   ]
 }
 

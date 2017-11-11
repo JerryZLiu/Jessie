@@ -6,7 +6,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import $ from "jQuery";
 import cookie from 'react-cookies';
 import Typist from 'react-typist';
-var LoginPage = React.createClass({
+var DataTimePage = React.createClass({
 
   getInitialState: function(){
     return {
@@ -25,18 +25,18 @@ var LoginPage = React.createClass({
           <div className="row"> 
             <div className="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4"> 
               <img src={require("../../common/images/flat-avatar.png")} className="user-avatar" /> 
-              <h1>Hi, I'm Jessie </h1> 
-              <h1> <small> Let me help you secure your financial future</small></h1>
+              <h1>{"Wow! In ten years, if you kept your excess savings in a savings account you would have $" + parseInt(cookie.load('pre10')).toFixed(2)}</h1> 
+              <h1>{"But if you invested that extra money in an ETF like the S&P 500, you would have $" + parseInt(cookie.load('post10')).toFixed(2)} </h1> 
+              <h1><small>{ "20 years in savings, $" + cookie.load('pre20')} </small></h1> 
+              <h1><small>{ "20 years in S&P 500, $" + parseInt(cookie.load('post20')).toFixed(2)} </small></h1> 
+              <h1><small>{ "30 years in savings, $" + cookie.load('pre30')} </small></h1> 
+              <h1><small>{ "30 years in S&P 500, $" + parseInt(cookie.load('post30')).toFixed(2)} </small></h1> 
+              <form role="form" onSubmit={this.handleNext} className="ng-pristine ng-valid"> 
+                <button type="submit" className="btn btn-white btn-outline btn-lg btn-rounded">Let me try a different yearly deposit!</button> 
+              </form> 
+              <h1>  </h1>
               <form role="form" onSubmit={this.handleLogin} className="ng-pristine ng-valid"> 
-                <div className="form-content"> 
-                  <div className="form-group"> 
-                    <input type="text" onChange={ this.setLoginID } className="form-control input-underline input-lg" placeholder="Name" /> 
-                  </div> 
-                  <div className="form-group"> 
-                    <input type="password" onChange={ this.setPassword } className="form-control input-underline input-lg" placeholder="Account ID" /> 
-                  </div> 
-                </div> 
-                <button type="submit" className="btn btn-white btn-outline btn-lg btn-rounded">Start</button> 
+                <button type="submit" className="btn btn-white btn-outline btn-lg btn-rounded">Start Over</button> 
               </form> 
             </div> 
           </div> 
@@ -100,19 +100,17 @@ getC1Expenditures: function() {
     });
 },
 
-  handleLogin: function(e){
-  console.log(cookie.load('userId'));
-    this.getC1Balance();
-    this.getC1Income();
-    this.getC1Expenditures();
-  	
-    console.log(cookie.load('firstName'));
-    console.log(cookie.load('balance'));
-    console.log(cookie.load('expenditures'));
-    console.log(cookie.load('income'));
-
+handleNext: function(e){
     e.preventDefault();
-    this.props.history.pushState(null, '/corejessie');
+    this.props.history.pushState(null, '/graphs');
+  },
+
+  handleLogin: function(e){
+     console.log("fuck");
+    console.log(cookie.load('userId'));
+    console.log(this.firstName);
+    e.preventDefault();
+    this.props.history.pushState(null, '/login');
     
     // this.transitionTo('dashboard');
 
@@ -122,4 +120,4 @@ getC1Expenditures: function() {
 
 });
 
-export default LoginPage;
+export default DataTimePage;
