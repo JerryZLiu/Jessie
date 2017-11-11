@@ -1,16 +1,15 @@
-## Ani Theme rewritten in React.js
+## Jessie
+React.js web app designed to help people live financially healthier lives using data from CapitalOne's Nessie API, built during HackNC.
 
-[![Join the chat at https://gitter.im/start-react/sb-admin-react](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/start-react/sb-admin-react?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Jessie takes critical financial data from Nessie, like total savings, expenditures over the last 6 months, and income over the last 6 months to tailor a financial goal and show people how to build wealth.
 
-This project is a port of the famous [Free Ani AngularJS Theme](http://startangular.com/product/ani-theme/) to React.js Theme based on [Essential React](https://github.com/pheuter/essential-react) using ES6 & Webpack.
-
-Find out more [Free React.js and React Native Themes at StartReact.com](http://www.startreact.com/).
+This project is built on the [Ani-Theme](https://github.com/start-react/ani-theme.git) in React.JS.
 
 ## Installation
 ####1. Clone this project or Download that ZIP file
 
 ```sh
-$ git clone https://github.com/start-react/ani-theme.git
+$ git clone https://github.com/JerryZLiu/Jessie.git
 ```
 
 ####2.  Make sure you have [npm](https://www.npmjs.org/) installed globally
@@ -31,12 +30,4 @@ $ npm start
 ```
 
 
-## Roadmap
 
-- Add sample AJAX calls and make the components more modular
-- Add chart examples
-
-
-### Automation tools used
-- [Webpack](https://webpack.github.io/)# Jessie
-# Jessie
