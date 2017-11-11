@@ -5,6 +5,10 @@ Jessie takes critical financial data from Nessie, like total savings, expenditur
 
 This project is built on the [Ani-Theme](https://github.com/start-react/ani-theme.git) in React.JS.
 
+![Alt text](/src/common/images/Start.png?raw=true "Start screen, user enters name and Capital One account ID.")
+
+![Alt text](/src/common/images/Data.png?raw=true "Financial Data collected from Nessie.")
+
 ## Installation
 ####1. Clone this project or Download that ZIP file
 
